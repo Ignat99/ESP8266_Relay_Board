@@ -36,7 +36,7 @@ void ICACHE_FLASH_ATTR thermostat(int current_t, int setpoint)
 		else
 			currGPIO12State=0;
 			
-		ioGPIO(currGPIO12State,12);
+		ioGPIO(currGPIO12State,5);
 	} else if(current_t > setpoint + sysCfg.thermostat1hysteresishigh ) {
 		os_printf("Current reading (%d) is more than the setpoint.\n",current_t);
 
@@ -45,7 +45,7 @@ void ICACHE_FLASH_ATTR thermostat(int current_t, int setpoint)
 		else
 			currGPIO12State=1;
 
-		ioGPIO(currGPIO12State,12);
+		ioGPIO(currGPIO12State,5);
 	}
 }
 

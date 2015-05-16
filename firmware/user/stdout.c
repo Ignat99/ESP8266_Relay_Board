@@ -100,7 +100,7 @@ uart0_rx_intr_handler(void *para)
 		
 			if(relayNum==1) {
 				currGPIO12State=relayState;
-				ioGPIO(currGPIO12State,12);
+				ioGPIO(currGPIO12State,5);
 			}
 
 			if(relayNum==2) {

@@ -176,7 +176,7 @@ void ICACHE_FLASH_ATTR mqttDataCb(uint32_t *args, const char* topic, uint32_t to
 		
 		if(relayNum=='1') {
 			currGPIO12State=atoi(strData);
-			ioGPIO(currGPIO12State,12);
+			ioGPIO(currGPIO12State,5);
 		}
 
 		if(relayNum=='2') {

@@ -53,7 +53,7 @@ static void ICACHE_FLASH_ATTR resetBtnTimerCb(void *arg) {
 void ICACHE_FLASH_ATTR ioInit() {
 	
 	//Set GPIO0, GPIO12-14 to output mode 
-	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTDI_U, FUNC_GPIO12);
+	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTDI_U, FUNC_GPIO5);
 	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTCK_U, FUNC_GPIO13);
 	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTDO_U, FUNC_GPIO15);
 	PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO0_U, FUNC_GPIO0);
@@ -70,13 +70,13 @@ void ICACHE_FLASH_ATTR ioInit() {
 		currGPIO13State=(int)sysCfg.relay_2_state;
 		currGPIO15State=(int)sysCfg.relay_3_state;
 
-		ioGPIO((int)sysCfg.relay_1_state,12);
+		ioGPIO((int)sysCfg.relay_1_state,5);
 		ioGPIO((int)sysCfg.relay_2_state,13);
 		ioGPIO((int)sysCfg.relay_3_state,15);
 	}
 	
 	else {
-		ioGPIO(0,12);
+		ioGPIO(0,5);
 		ioGPIO(0,13);
 		ioGPIO(0,15);
 	}

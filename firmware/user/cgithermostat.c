@@ -140,7 +140,7 @@ int ICACHE_FLASH_ATTR cgiThermostat(HttpdConnData *connData) {
 				
 				//Switching off thermostat means force off for relay 1
 				currGPIO12State=0;
-				ioGPIO(currGPIO12State,12);
+				ioGPIO(currGPIO12State,5);
 				
 				CFG_Save();
 				os_printf("Handle thermostat state (%d) saved\n",(int)sysCfg.thermostat1state);
